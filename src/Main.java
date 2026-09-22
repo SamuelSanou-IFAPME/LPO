@@ -47,7 +47,7 @@ void main() {
                     name = "Thé";
                     break;
                 case 4:
-                    prix = 2;7
+                    prix = 2;
                     status = true;
                     name = "Chocolat chaud";
                     break;
