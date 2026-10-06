@@ -37,12 +37,11 @@ public class Employe {
     }
 
     // Calcule et affiche le salaire total
-    public void salaire() {
-        float total = this.acompte
+    public float salaire() {
+        float salaire = this.acompte
                 ? (this.nbHeures * this.salaireHoraire) - 500
                 : (this.nbHeures * this.salaireHoraire);
-
-        System.out.println("Salaire de " + this.nom + " : " + total + "€");
+        return salaire;
     }
 
     public static void main(String[] args) {
@@ -50,10 +49,10 @@ public class Employe {
 
         moi.travaille(10);
         moi.travaille(8);
-        moi.salaire();
+        System.out.println("Salaire de " + moi.nom + " : " + moi.salaire() + "€");
         moi.demandeAcompte();
-        moi.salaire();
+        System.out.println("Salaire de " + moi.nom + " : " + moi.salaire() + "€");
         moi.demandeAcompte();
-        moi.salaire();
+        System.out.println("Salaire de " + moi.nom + " : " + moi.salaire() + "€");
     }
 }
