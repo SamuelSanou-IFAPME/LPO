@@ -14,7 +14,5 @@ public class Verbe {
         this.leVerbe = leVerbe;
     }
 
-    public boolean isValide() {
-        return leVerbe.endsWith("er");
-    }
+
 }

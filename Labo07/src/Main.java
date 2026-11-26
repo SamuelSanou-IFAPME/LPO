@@ -3,15 +3,15 @@ void main() {
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Donner un verbe régulier du 1er groupe : ");
-    Verbe verbe = new Verbe(sc.next());
+    String in =  sc.next();
 
-    while (!verbe.isValide()) {
+
+    while (! (in.length()>3 && in.endsWith("er"))) {
         System.out.println("Verbe invalide , rééssayer");
-        verbe.setLeVerbe(sc.next());
+        in = sc.next();
     }
-
-    Conjugaison conj = new Conjugaison(verbe.getLeVerbe());
-    conj.affichePresent();
+    Verbe verbe =  new Verbe(in);
+    Conjugaison.affichePresent(verbe);
     sc.close();
 
 
